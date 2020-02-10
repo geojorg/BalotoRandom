@@ -5,22 +5,14 @@ using BalotoRandom.Controls;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
-[assembly: ExportRenderer(typeof(AdMobView), typeof(AdMobRenderer))]
-
+[assembly: ExportRenderer(typeof(AdMobView), typeof(AdMobViewRenderer))]
 namespace BalotoRand.CustomRenderers
 {
-    public class AdMobRenderer : ViewRenderer
+    public class AdMobViewRenderer : ViewRenderer
     {
-        public AdMobRenderer(Context context) : base(context)
+        public AdMobViewRenderer(Context context) : base(context)
         {
 
-        }
-        private int GetSmartBannerDpHeight()
-        {
-            var dpHeight = Resources.DisplayMetrics.HeightPixels / Resources.DisplayMetrics.Density;
-            if (dpHeight <= 400) return 32;
-            if (dpHeight <= 720) return 50;
-            return 90;
         }
 
         protected override void OnElementChanged(ElementChangedEventArgs<View> e)
@@ -42,6 +34,13 @@ namespace BalotoRand.CustomRenderers
 
                 SetNativeControl(ad);
             }
+        }
+        private int GetSmartBannerDpHeight()
+        {
+            var dpHeight = Resources.DisplayMetrics.HeightPixels / Resources.DisplayMetrics.Density;
+            if (dpHeight <= 400) return 32;
+            if (dpHeight <= 720) return 50;
+            return 90;
         }
     }
 }

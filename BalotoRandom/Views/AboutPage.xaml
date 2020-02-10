@@ -72,7 +72,7 @@
                         WidthRequest="190" />
                     <Button
                         BackgroundColor="#1601C8"
-                        Command="{Binding GitCommand}"
+                        Command="{Binding WebPageCommand}"
                         CornerRadius="7"
                         HeightRequest="46"
                         HorizontalOptions="Center"
