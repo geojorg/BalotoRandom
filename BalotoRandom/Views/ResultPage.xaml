@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="BalotoRandom.Views.ResultPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ads="clr-namespace:BalotoRandom.Controls"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="clr-namespace:BalotoRandom.ViewModels"
+    Title="Comprobar Resultados"
+    Shell.BackgroundColor="#1601C8"
+    mc:Ignorable="d">
+
+    <Grid
+        x:DataType="viewModels:ResultViewModel"
+        ColumnSpacing="0"
+        RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="4*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Label
+            Grid.Row="0"
+            Grid.ColumnSpan="6"
+            Margin="15"
+            FontSize="Body"
+            HorizontalOptions="Center"
+            HorizontalTextAlignment="Center"
+            Text="Ingresa los dos numeros en cada balota para determinar si acertaste para el ultimo sorteo" />
+        <Label
+            Grid.Row="1"
+            Grid.ColumnSpan="6"
+            FontSize="Medium"
+            HorizontalOptions="Center"
+            Text="TU PREMIO ES DE:" />
+        <Label
+            Grid.Row="2"
+            Grid.ColumnSpan="6"
+            FontSize="48"
+            HorizontalOptions="Center"
+            Text="{Binding Win}"
+            TextColor="Black" />
+        <Label
+            Grid.Row="3"
+            Grid.ColumnSpan="6"
+            FontSize="Body"
+            HorizontalOptions="Center"
+            HorizontalTextAlignment="Center"
+            Text="{Binding Message}"
+            TextColor="{Binding IsVisible}" />
+        <Image
+            Grid.Row="4"
+            Grid.Column="0"
+            Margin="3"
+            Source="{Binding ColorBalot0}" />
+        <Entry
+            Grid.Row="4"
+            Grid.Column="0"
+            FontAttributes="Bold"
+            HorizontalOptions="Center"
+            HorizontalTextAlignment="Center"
+            Keyboard="Numeric"
+            MaxLength="2"
+            ReturnType="Next"
+            Text="{Binding Balot0}"
+            TextColor="White"
+            VerticalOptions="Center"
+            WidthRequest="30" />
+        <Image
+            Grid.Row="4"
+            Grid.Column="1"
+            Margin="2"
+            Source="{Binding ColorBalot1}" />
+        <Entry
+            Grid.Row="4"
+            Grid.Column="1"
+            FontAttributes="Bold"
+            HorizontalOptions="Center"
+            HorizontalTextAlignment="Center"
+            Keyboard="Numeric"
+            MaxLength="2"
+            ReturnType="Next"
+            Text="{Binding Balot1}"
+            TextColor="White"
+            VerticalOptions="Center"
+            WidthRequest="30" />
+        <Image
+            Grid.Row="4"
+            Grid.Column="2"
+            Margin="2"
+            Source="{Binding ColorBalot2}" />
+        <Entry
+            Grid.Row="4"
+            Grid.Column="2"
+            FontAttributes="Bold"
+            HorizontalOptions="Center"
+            HorizontalTextAlignment="Center"
+            Keyboard="Numeric"
+            MaxLength="2"
+            ReturnType="Next"
+            Text="{Binding Balot2}"
+            TextColor="White"
+            VerticalOptions="Center"
+            WidthRequest="30" />
+        <Image
+            Grid.Row="4"
+            Grid.Column="3"
+            Margin="2"
+            Source="{Binding ColorBalot3}" />
+        <Entry
+            Grid.Row="4"
+            Grid.Column="3"
+            FontAttributes="Bold"
+            HorizontalOptions="Center"
+            HorizontalTextAlignment="Center"
+            Keyboard="Numeric"
+            MaxLength="2"
+            ReturnType="Next"
+            Text="{Binding Balot3}"
+            TextColor="White"
+            VerticalOptions="Center"
+            WidthRequest="30" />
+        <Image
+            Grid.Row="4"
+            Grid.Column="4"
+            Margin="2"
+            Source="{Binding ColorBalot4}" />
+        <Entry
+            Grid.Row="4"
+            Grid.Column="4"
+            FontAttributes="Bold"
+            HorizontalOptions="Center"
+            HorizontalTextAlignment="Center"
+            Keyboard="Numeric"
+            MaxLength="2"
+            ReturnType="Next"
+            Text="{Binding Balot4}"
+            TextColor="White"
+            VerticalOptions="Center"
+            WidthRequest="30" />
+        <Image
+            Grid.Row="4"
+            Grid.Column="5"
+            Margin="2"
+            Source="{Binding ColorBalot5}" />
+        <Entry
+            Grid.Row="4"
+            Grid.Column="5"
+            FontAttributes="Bold"
+            HorizontalOptions="Center"
+            HorizontalTextAlignment="Center"
+            Keyboard="Numeric"
+            MaxLength="2"
+            ReturnType="Next"
+            Text="{Binding Balot5}"
+            TextColor="White"
+            VerticalOptions="Center"
+            WidthRequest="30" />
+        <Button
+            Grid.Row="5"
+            Grid.ColumnSpan="3"
+            Margin="20,20,20,25"
+            BackgroundColor="#FF1344"
+            Command="{Binding BalotoCommand}"
+            CornerRadius="7"
+            HorizontalOptions="Center"
+            IsEnabled="{Binding IsEnable}"
+            Text="Baloto"
+            TextColor="White"
+            WidthRequest="190" />
+        <Button
+            Grid.Row="5"
+            Grid.Column="3"
+            Grid.ColumnSpan="3"
+            Margin="20,20,20,25"
+            BackgroundColor="#FF1344"
+            Command="{Binding RevanchaCommand}"
+            CornerRadius="7"
+            HorizontalOptions="Center"
+            IsEnabled="{Binding IsEnable}"
+            Text="Revancha"
+            TextColor="White"
+            WidthRequest="190" />
+        <ads:AdMobView Grid.Row="6" Grid.ColumnSpan="6" />
+    </Grid>
+</ContentPage>

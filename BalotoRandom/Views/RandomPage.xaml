@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="BalotoRandom.Views.RandomPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ads="clr-namespace:BalotoRandom.Controls"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="clr-namespace:BalotoRandom.ViewModels"
+    Title="Baloto"
+    Shell.BackgroundColor="#1601C8"
+    Shell.TabBarIsVisible="False"
+    mc:Ignorable="d">
+
+    <Grid
+        x:DataType="viewModels:RandomViewModel"
+        ColumnSpacing="0"
+        RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Image
+            Grid.Row="0"
+            Grid.ColumnSpan="6"
+            Aspect="AspectFit"
+            BackgroundColor="#1601C8"
+            Source="BalotoTittle" />
+        <Image
+            Grid.Row="1"
+            Grid.Column="0"
+            Margin="2"
+            HeightRequest="55"
+            Source="YellowBall"
+            WidthRequest="55" />
+        <Label
+            Grid.Row="1"
+            Grid.Column="0"
+            FontAttributes="Bold"
+            FontSize="25"
+            HorizontalOptions="Center"
+            IsVisible="{Binding IsVisible}"
+            Text="{Binding Num1, StringFormat='{0:00}'}"
+            TextColor="White"
+            VerticalOptions="Center" />
+        <Image
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="2"
+            HeightRequest="55"
+            Source="YellowBall"
+            WidthRequest="55" />
+        <Label
+            Grid.Row="1"
+            Grid.Column="1"
+            FontAttributes="Bold"
+            FontSize="25"
+            HorizontalOptions="Center"
+            IsVisible="{Binding IsVisible}"
+            Text="{Binding Num2, StringFormat='{0:00}'}"
+            TextColor="White"
+            VerticalOptions="Center" />
+        <Image
+            Grid.Row="1"
+            Grid.Column="2"
+            Margin="2"
+            HeightRequest="55"
+            Source="YellowBall"
+            WidthRequest="55" />
+        <Label
+            Grid.Row="1"
+            Grid.Column="2"
+            FontAttributes="Bold"
+            FontSize="25"
+            HorizontalOptions="Center"
+            IsVisible="{Binding IsVisible}"
+            Text="{Binding Num3, StringFormat='{0:00}'}"
+            TextColor="White"
+            VerticalOptions="Center" />
+        <Image
+            Grid.Row="1"
+            Grid.Column="3"
+            Margin="2"
+            HeightRequest="55"
+            Source="YellowBall"
+            WidthRequest="55" />
+        <Label
+            Grid.Row="1"
+            Grid.Column="3"
+            FontAttributes="Bold"
+            FontSize="25"
+            HorizontalOptions="Center"
+            IsVisible="{Binding IsVisible}"
+            Text="{Binding Num4, StringFormat='{0:00}'}"
+            TextColor="White"
+            VerticalOptions="Center" />
+        <Image
+            Grid.Row="1"
+            Grid.Column="4"
+            Margin="2"
+            HeightRequest="55"
+            Source="YellowBall"
+            WidthRequest="55" />
+        <Label
+            Grid.Row="1"
+            Grid.Column="4"
+            FontAttributes="Bold"
+            FontSize="25"
+            HorizontalOptions="Center"
+            IsVisible="{Binding IsVisible}"
+            Text="{Binding Num5, StringFormat='{0:00}'}"
+            TextColor="White"
+            VerticalOptions="Center" />
+        <Image
+            Grid.Row="1"
+            Grid.Column="5"
+            Margin="2"
+            HeightRequest="55"
+            Source="RedBall"
+            WidthRequest="55" />
+        <Label
+            Grid.Row="1"
+            Grid.Column="5"
+            FontAttributes="Bold"
+            FontSize="25"
+            HorizontalOptions="Center"
+            IsVisible="{Binding IsVisible}"
+            Text="{Binding Num6, StringFormat='{0:00}'}"
+            TextColor="White"
+            VerticalOptions="Center" />
+        <Label
+            Grid.Row="2"
+            Grid.ColumnSpan="6"
+            FontSize="20"
+            HorizontalOptions="Center"
+            HorizontalTextAlignment="Center"
+            Text="{Binding Message}"
+            TextColor="{Binding Color}"
+            VerticalTextAlignment="Center" />
+        <Button
+            Grid.Row="3"
+            Grid.ColumnSpan="3"
+            Margin="0,0,0,40"
+            BackgroundColor="#FF1344"
+            Command="{Binding GenerateCommand}"
+            CornerRadius="7"
+            HeightRequest="50"
+            HorizontalOptions="Center"
+            Text="Aleatorio"
+            TextColor="White"
+            WidthRequest="170" />
+        <Button
+            Grid.Row="3"
+            Grid.Column="3"
+            Grid.ColumnSpan="3"
+            Margin="0,0,0,40"
+            BackgroundColor="#FF1344"
+            Command="{Binding ArtificialCommand}"
+            CornerRadius="7"
+            HeightRequest="50"
+            HorizontalOptions="Center"
+            Text="Probable"
+            TextColor="White"
+            WidthRequest="170" />
+        <ads:AdMobView Grid.Row="4" Grid.ColumnSpan="6" />
+    </Grid>
+</ContentPage>

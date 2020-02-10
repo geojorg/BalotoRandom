@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell
+    x:Class="BalotoRandom.AppShell"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:BalotoRandom.Controls"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:views="clr-namespace:BalotoRandom.Views"
+    mc:Ignorable="d">
+
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontFamily">
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="Android">Ubuntu.ttf#Ubuntu</On>
+                    </OnPlatform>
+                </Setter>
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="FontFamily">
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="Android">Ubuntu.ttf#Ubuntu</On>
+                    </OnPlatform>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <Shell.FlyoutHeader>
+        <controls:MenuHeader />
+    </Shell.FlyoutHeader>
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems" Shell.BackgroundColor="Black">
+        <ShellContent
+            Title="Principal"
+            ContentTemplate="{DataTemplate views:RandomPage}"
+            Icon="ic_action_home"
+            Route="MainPage" />
+        <ShellContent
+            Title="Resultados Baloto"
+            ContentTemplate="{DataTemplate views:BalotoPage}"
+            Icon="ic_action_baloto"
+            Route="Baloto" />
+        <ShellContent
+            Title="Resultados Revancha"
+            ContentTemplate="{DataTemplate views:RevanchaPage}"
+            Icon="ic_action_revancha"
+            Route="Revancha" />
+        <ShellContent
+            Title="Comprobar Resultados"
+            ContentTemplate="{DataTemplate views:ResultPage}"
+            Icon="ic_action_search"
+            Route="Resultados" />
+        <ShellContent
+            Title="Donde Comprar"
+            ContentTemplate="{DataTemplate views:LocationPage}"
+            Icon="ic_action_searching"
+            Route="Location" />
+    </FlyoutItem>
+
+    <MenuItem
+        Command="{Binding RateCommand}"
+        CommandParameter="https://play.google.com/store/apps/details?id=com.companyname.balotorandom"
+        IconImageSource="ic_action_star_rate"
+        Text="Calificar" />
+    <MenuItem
+        Command="{Binding ShareAppCommand}"
+        IconImageSource="ic_action_share"
+        Text="Compartir" />
+    <ShellContent
+        Title="Acerca De"
+        ContentTemplate="{DataTemplate views:AboutPage}"
+        Icon="ic_action_info"
+        Route="About" />
+</Shell>

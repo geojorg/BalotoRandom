@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="BalotoRandom.Views.BalotoPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ads="clr-namespace:BalotoRandom.Controls"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="clr-namespace:BalotoRandom.ViewModels"
+    Title="{Binding Sorteo}"
+    Shell.BackgroundColor="#1601C8"
+    mc:Ignorable="d">
+
+    <ContentPage.Content>
+        <Grid
+            x:DataType="viewModels:BalotoViewModel"
+            ColumnSpacing="0"
+            RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="5*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label
+                Grid.Row="0"
+                Grid.ColumnSpan="6"
+                BackgroundColor="#1601C8"
+                FontSize="Body"
+                HorizontalTextAlignment="Center"
+                Text="{Binding Fecha}"
+                TextColor="White" />
+            <Image
+                Grid.Row="1"
+                Grid.ColumnSpan="6"
+                Aspect="AspectFit"
+                BackgroundColor="#1601C8"
+                Source="BalotoTittle" />
+            <Label
+                Grid.Row="2"
+                Grid.ColumnSpan="6"
+                BackgroundColor="#FF1344"
+                FontSize="Title"
+                HorizontalTextAlignment="Center"
+                Text="{Binding Acumulado}"
+                TextColor="White"
+                VerticalTextAlignment="Center" />
+            <Image
+                Grid.Row="3"
+                Grid.Column="0"
+                Margin="2"
+                Source="YellowBall" />
+            <Label
+                Grid.Row="3"
+                Grid.Column="0"
+                FontAttributes="Bold"
+                FontSize="25"
+                HorizontalOptions="Center"
+                Text="{Binding Res1}"
+                TextColor="White"
+                VerticalOptions="Center" />
+            <Image
+                Grid.Row="3"
+                Grid.Column="1"
+                Margin="2"
+                Source="YellowBall" />
+            <Label
+                Grid.Row="3"
+                Grid.Column="1"
+                FontAttributes="Bold"
+                FontSize="25"
+                HorizontalOptions="Center"
+                Text="{Binding Res2}"
+                TextColor="White"
+                VerticalOptions="Center" />
+            <Image
+                Grid.Row="3"
+                Grid.Column="2"
+                Margin="2"
+                Source="YellowBall" />
+            <Label
+                Grid.Row="3"
+                Grid.Column="2"
+                FontAttributes="Bold"
+                FontSize="25"
+                HorizontalOptions="Center"
+                Text="{Binding Res3}"
+                TextColor="White"
+                VerticalOptions="Center" />
+            <Image
+                Grid.Row="3"
+                Grid.Column="3"
+                Margin="2"
+                Source="YellowBall" />
+            <Label
+                Grid.Row="3"
+                Grid.Column="3"
+                FontAttributes="Bold"
+                FontSize="25"
+                HorizontalOptions="Center"
+                Text="{Binding Res4}"
+                TextColor="White"
+                VerticalOptions="Center" />
+            <Image
+                Grid.Row="3"
+                Grid.Column="4"
+                Margin="2"
+                Source="YellowBall" />
+            <Label
+                Grid.Row="3"
+                Grid.Column="4"
+                FontAttributes="Bold"
+                FontSize="25"
+                HorizontalOptions="Center"
+                Text="{Binding Res5}"
+                TextColor="White"
+                VerticalOptions="Center" />
+            <Image
+                Grid.Row="3"
+                Grid.Column="5"
+                Margin="2"
+                Source="RedBall" />
+            <Label
+                Grid.Row="3"
+                Grid.Column="5"
+                FontAttributes="Bold"
+                FontSize="25"
+                HorizontalOptions="Center"
+                Text="{Binding Res6}"
+                TextColor="White"
+                VerticalOptions="Center" />
+            <Label
+                Grid.Row="4"
+                Grid.ColumnSpan="6"
+                BackgroundColor="#FF1344"
+                FontSize="Title"
+                HorizontalTextAlignment="Center"
+                Text="Resultados Anteriores"
+                TextColor="White"
+                VerticalTextAlignment="Center" />
+            <Label
+                Grid.Row="5"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                BackgroundColor="#FF1344"
+                HorizontalTextAlignment="Center"
+                Text="{Binding AntFecha1}"
+                TextColor="White" />
+            <Label
+                Grid.Row="5"
+                Grid.Column="3"
+                Grid.ColumnSpan="3"
+                BackgroundColor="#FF1344"
+                HorizontalTextAlignment="Center"
+                Text="{Binding ResFecha1}"
+                TextColor="White" />
+            <Label
+                Grid.Row="6"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                BackgroundColor="#FF1344"
+                HorizontalTextAlignment="Center"
+                Text="{Binding AntFecha2}"
+                TextColor="White" />
+            <Label
+                Grid.Row="6"
+                Grid.Column="3"
+                Grid.ColumnSpan="3"
+                BackgroundColor="#FF1344"
+                HorizontalTextAlignment="Center"
+                Text="{Binding ResFecha2}"
+                TextColor="White" />
+            <Label
+                Grid.Row="7"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                BackgroundColor="#FF1344"
+                HorizontalTextAlignment="Center"
+                Text="{Binding AntFecha3}"
+                TextColor="White" />
+            <Label
+                Grid.Row="7"
+                Grid.Column="3"
+                Grid.ColumnSpan="3"
+                BackgroundColor="#FF1344"
+                HorizontalTextAlignment="Center"
+                Text="{Binding ResFecha3}"
+                TextColor="White" />
+            <Label
+                Grid.Row="8"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                BackgroundColor="#FF1344"
+                HorizontalTextAlignment="Center"
+                Text="{Binding AntFecha4}"
+                TextColor="White" />
+            <Label
+                Grid.Row="8"
+                Grid.Column="3"
+                Grid.ColumnSpan="3"
+                BackgroundColor="#FF1344"
+                HorizontalTextAlignment="Center"
+                Text="{Binding ResFecha4}"
+                TextColor="White" />
+            <ads:AdMobView Grid.Row="9" Grid.ColumnSpan="6" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

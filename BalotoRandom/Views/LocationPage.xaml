@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="BalotoRandom.Views.LocationPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ads="clr-namespace:BalotoRandom.Controls"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="clr-namespace:BalotoRandom.ViewModels"
+    Title="Donde Comprar"
+    Shell.BackgroundColor="#1601C8"
+    mc:Ignorable="d">
+
+    <ContentPage.Content>
+        <Grid x:DataType="viewModels:LocationViewModel">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <ContentView Grid.Row="0" Content="{Binding BalotoMap}" />
+            <Label
+                Grid.Row="1"
+                FontSize="Large"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                Text="{Binding Name}"
+                VerticalOptions="Center" />
+            <Label
+                Grid.Row="2"
+                FontSize="Large"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                Text="{Binding Direction}" />
+            <Button
+                Grid.Row="3"
+                BackgroundColor="#FF1344"
+                Command="{Binding SearchCommand}"
+                CornerRadius="7"
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                IsEnabled="{Binding IsEnable}"
+                Text="Buscar"
+                TextColor="White"
+                WidthRequest="170" />
+            <ads:AdMobView Grid.Row="4" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
