@@ -3,7 +3,7 @@ using Android.App;
 using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
-using BalotoRandom.Services;
+using BalotoRandom.Interfaces;
 using Xamarin.Forms;
 
 namespace BalotoRandom.Droid

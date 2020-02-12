@@ -1,7 +1,7 @@
 ﻿using BalotoRandom.Models;
 using System.Threading.Tasks;
 
-namespace BalotoRandom.Services
+namespace BalotoRandom.Interfaces
 {
     public interface IMapsService
     {

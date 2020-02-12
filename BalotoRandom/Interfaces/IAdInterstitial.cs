@@ -1,4 +1,4 @@
-﻿namespace BalotoRandom.Services
+﻿namespace BalotoRandom.Interfaces
 {
     public interface IAdInterstitial
     {

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="51" android:versionName="2.3.912" package="com.companyname.balotorandom" android:installLocation="auto">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="52" android:versionName="2.3.912" package="com.companyname.balotorandom" android:installLocation="auto">
 	<uses-sdk android:minSdkVersion="22" android:targetSdkVersion="29" />
 	<application android:usesCleartextTraffic="true" android:label="BalotoRand" android:icon="@mipmap/ic_launcher_round">
 		<activity android:name="com.google.android.gms.ads.AdActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />

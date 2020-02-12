@@ -1,4 +1,5 @@
 ﻿using BalotoRandom.Helpers;
+using BalotoRandom.Interfaces;
 using BalotoRandom.Services;
 using HtmlAgilityPack;
 using System;

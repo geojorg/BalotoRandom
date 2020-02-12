@@ -1,7 +1,7 @@
 ﻿using Android.Gms.Ads;
 using Android.Util;
 using BalotoRand.CustomRenderers;
-using BalotoRandom.Services;
+using BalotoRandom.Interfaces;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(AdMobInterstitial))]

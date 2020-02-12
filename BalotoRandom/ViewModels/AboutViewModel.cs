@@ -1,4 +1,4 @@
-﻿using BalotoRandom.Services;
+﻿using BalotoRandom.Interfaces;
 using System;
 using System.Windows.Input;
 using Xamarin.Essentials;
