@@ -1,246 +1,223 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
-             xmlns:viewModels="clr-namespace:BalotoRandom.ViewModels"
-             xmlns:ads="clr-namespace:BalotoRandom.Controls"
-             x:Class="BalotoRandom.Views.RevanchaPage"
-             Title="{Binding Sorteo}"
-             Shell.BackgroundColor="#1601C8">
-    
+<ContentPage
+    x:Class="BalotoRandom.Views.RevanchaPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ads="clr-namespace:BalotoRandom.Controls"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:i18n="clr-namespace:BalotoRandom.Helpers"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="clr-namespace:BalotoRandom.ViewModels"
+    Title="{Binding Sorteo}"
+    Shell.BackgroundColor="#1601C8"
+    mc:Ignorable="d">
+
     <ContentPage.Content>
-        <Grid RowSpacing="0"
-              ColumnSpacing="0"
-              x:DataType="viewModels:RevanchaViewModel">
+        <Grid
+            x:DataType="viewModels:RevanchaViewModel"
+            ColumnSpacing="0"
+            RowSpacing="0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="5*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="5*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <Label
+                Grid.Row="0"
                 Grid.ColumnSpan="6"
                 BackgroundColor="#1601C8"
                 FontSize="Body"
-                Grid.Row="0"
                 HorizontalTextAlignment="Center"
-                TextColor="White"
-                Text="{Binding Fecha}">
-            </Label>
+                Text="{Binding Fecha}"
+                TextColor="White" />
             <Image
+                Grid.Row="1"
                 Grid.ColumnSpan="6"
                 Aspect="AspectFit"
                 BackgroundColor="#1601C8"
-                Grid.Row="1"
-                Source="RevanchaTittle">
-            </Image>
+                Source="RevanchaTittle" />
             <Label
-                Grid.ColumnSpan="6"
-                BackgroundColor="#FF1344"
-                FontSize="Title"
                 Grid.Row="2"
-                HorizontalTextAlignment="Center"
-                TextColor="White"
-                Text="{Binding Acumulado}"
-                VerticalTextAlignment="Center">
-            </Label>
-            <Image
-                Margin="2"
-                Grid.Row="3"
-                Grid.Column="0"
-                Source="YellowBall">
-            </Image>
-            <Label
-                FontAttributes="Bold"
-                FontSize="25"
-                Grid.Column="0"
-                Grid.Row="3"
-                HorizontalOptions="Center"
-                TextColor="White"
-                Text="{Binding Rev1}"
-                VerticalOptions="Center">
-            </Label>
-            <Image
-                Margin="2"
-                Grid.Row="3"
-                Grid.Column="1"
-                Source="YellowBall">
-            </Image>
-            <Label
-                FontAttributes="Bold"
-                FontSize="25"
-                Grid.Column="1"
-                Grid.Row="3"
-                HorizontalOptions="Center"
-                TextColor="White"
-                Text="{Binding Rev2}"
-                VerticalOptions="Center">
-            </Label>
-            <Image
-                Margin="2"
-                Grid.Row="3"
-                Grid.Column="2"
-                Source="YellowBall">
-            </Image>
-            <Label
-                FontAttributes="Bold"
-                FontSize="25"
-                Grid.Column="2"
-                Grid.Row="3"
-                HorizontalOptions="Center"
-                TextColor="White"
-                Text="{Binding Rev3}"
-                VerticalOptions="Center">
-            </Label>
-            <Image
-                Margin="2"
-                Grid.Row="3"
-                Grid.Column="3"
-                Source="YellowBall">
-            </Image>
-            <Label
-                FontAttributes="Bold"
-                FontSize="25"
-                Grid.Column="3"
-                Grid.Row="3"
-                HorizontalOptions="Center"
-                TextColor="White"
-                Text="{Binding Rev4}"
-                VerticalOptions="Center">
-            </Label>
-            <Image
-                Margin="2"
-                Grid.Row="3"
-                Grid.Column="4"
-                Source="YellowBall">
-            </Image>
-            <Label
-                FontAttributes="Bold"
-                FontSize="25"
-                Grid.Column="4"
-                Grid.Row="3"
-                HorizontalOptions="Center"
-                TextColor="White"
-                Text="{Binding Rev5}"
-                VerticalOptions="Center">
-            </Label>
-            <Image
-                Margin="2"
-                Grid.Row="3"
-                Grid.Column="5"
-                Source="RedBall">
-            </Image>
-            <Label
-                FontAttributes="Bold"
-                FontSize="25"
-                Grid.Column="5"
-                Grid.Row="3"
-                HorizontalOptions="Center"
-                TextColor="White"
-                Text="{Binding Rev6}"
-                VerticalOptions="Center">
-            </Label>
-            <Label
                 Grid.ColumnSpan="6"
                 BackgroundColor="#FF1344"
                 FontSize="Title"
-                Grid.Row="4"
                 HorizontalTextAlignment="Center"
+                Text="{Binding Acumulado}"
                 TextColor="White"
-                Text="Resultados Anteriores"
-                VerticalTextAlignment="Center">
-            </Label>
-            <Label
-                Grid.ColumnSpan="3"
-                BackgroundColor="#FF1344"
-                Grid.Row="5"
+                VerticalTextAlignment="Center" />
+            <Image
+                Grid.Row="3"
                 Grid.Column="0"
-                Text="{Binding AntFecha1}"
-                HorizontalTextAlignment="Center"
-                TextColor="White">
-            </Label>
+                Margin="2"
+                Source="YellowBall" />
             <Label
-                Grid.ColumnSpan="3"
-                BackgroundColor="#FF1344"
-                Grid.Row="5"
-                Grid.Column="3"
-                Text="{Binding ResFecha1}"
-                HorizontalTextAlignment="Center"
-                TextColor="White">
-            </Label>
-            <Label
-                Grid.ColumnSpan="3"
-                BackgroundColor="#FF1344"
-                Grid.Row="6"
+                Grid.Row="3"
                 Grid.Column="0"
-                Text="{Binding AntFecha2}"
-                HorizontalTextAlignment="Center"
-                TextColor="White">
-            </Label>
+                FontAttributes="Bold"
+                FontSize="25"
+                HorizontalOptions="Center"
+                Text="{Binding Rev1}"
+                TextColor="White"
+                VerticalOptions="Center" />
+            <Image
+                Grid.Row="3"
+                Grid.Column="1"
+                Margin="2"
+                Source="YellowBall" />
             <Label
-                Grid.ColumnSpan="3"
-                BackgroundColor="#FF1344"
-                Grid.Row="6"
+                Grid.Row="3"
+                Grid.Column="1"
+                FontAttributes="Bold"
+                FontSize="25"
+                HorizontalOptions="Center"
+                Text="{Binding Rev2}"
+                TextColor="White"
+                VerticalOptions="Center" />
+            <Image
+                Grid.Row="3"
+                Grid.Column="2"
+                Margin="2"
+                Source="YellowBall" />
+            <Label
+                Grid.Row="3"
+                Grid.Column="2"
+                FontAttributes="Bold"
+                FontSize="25"
+                HorizontalOptions="Center"
+                Text="{Binding Rev3}"
+                TextColor="White"
+                VerticalOptions="Center" />
+            <Image
+                Grid.Row="3"
                 Grid.Column="3"
-                Text="{Binding ResFecha2}"
-                HorizontalTextAlignment="Center"
-                TextColor="White">
-            </Label>
+                Margin="2"
+                Source="YellowBall" />
             <Label
-                Grid.ColumnSpan="3"
-                BackgroundColor="#FF1344"
-                Grid.Row="7"
-                Grid.Column="0"
-                Text="{Binding AntFecha3}"
-                HorizontalTextAlignment="Center"
-                TextColor="White">
-            </Label>
-            <Label
-                Grid.ColumnSpan="3"
-                BackgroundColor="#FF1344"
-                Grid.Row="7"
+                Grid.Row="3"
                 Grid.Column="3"
-                Text="{Binding ResFecha3}"
-                HorizontalTextAlignment="Center"
-                TextColor="White">
-            </Label>
+                FontAttributes="Bold"
+                FontSize="25"
+                HorizontalOptions="Center"
+                Text="{Binding Rev4}"
+                TextColor="White"
+                VerticalOptions="Center" />
+            <Image
+                Grid.Row="3"
+                Grid.Column="4"
+                Margin="2"
+                Source="YellowBall" />
             <Label
-                Grid.ColumnSpan="3"
-                BackgroundColor="#FF1344"
-                Grid.Row="8"
-                Grid.Column="0"
-                Text="{Binding AntFecha4}"
-                HorizontalTextAlignment="Center"
-                TextColor="White">
-            </Label>
+                Grid.Row="3"
+                Grid.Column="4"
+                FontAttributes="Bold"
+                FontSize="25"
+                HorizontalOptions="Center"
+                Text="{Binding Rev5}"
+                TextColor="White"
+                VerticalOptions="Center" />
+            <Image
+                Grid.Row="3"
+                Grid.Column="5"
+                Margin="2"
+                Source="RedBall" />
             <Label
-                Grid.ColumnSpan="3"
-                BackgroundColor="#FF1344"
-                Grid.Row="8"
-                Grid.Column="3"
-                Text="{Binding ResFecha4}"
-                HorizontalTextAlignment="Center"
-                TextColor="White">
-            </Label>
-            <ads:AdMobView 
+                Grid.Row="3"
+                Grid.Column="5"
+                FontAttributes="Bold"
+                FontSize="25"
+                HorizontalOptions="Center"
+                Text="{Binding Rev6}"
+                TextColor="White"
+                VerticalOptions="Center" />
+            <Label
+                Grid.Row="4"
                 Grid.ColumnSpan="6"
-                Grid.Row="9"/>
+                BackgroundColor="#FF1344"
+                FontSize="Title"
+                HorizontalTextAlignment="Center"
+                Text="{i18n:Translate PrevResults}"
+                TextColor="White"
+                VerticalTextAlignment="Center" />
+            <Label
+                Grid.Row="5"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                BackgroundColor="#FF1344"
+                HorizontalTextAlignment="Center"
+                Text="{Binding AntFecha1}"
+                TextColor="White" />
+            <Label
+                Grid.Row="5"
+                Grid.Column="3"
+                Grid.ColumnSpan="3"
+                BackgroundColor="#FF1344"
+                HorizontalTextAlignment="Center"
+                Text="{Binding ResFecha1}"
+                TextColor="White" />
+            <Label
+                Grid.Row="6"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                BackgroundColor="#FF1344"
+                HorizontalTextAlignment="Center"
+                Text="{Binding AntFecha2}"
+                TextColor="White" />
+            <Label
+                Grid.Row="6"
+                Grid.Column="3"
+                Grid.ColumnSpan="3"
+                BackgroundColor="#FF1344"
+                HorizontalTextAlignment="Center"
+                Text="{Binding ResFecha2}"
+                TextColor="White" />
+            <Label
+                Grid.Row="7"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                BackgroundColor="#FF1344"
+                HorizontalTextAlignment="Center"
+                Text="{Binding AntFecha3}"
+                TextColor="White" />
+            <Label
+                Grid.Row="7"
+                Grid.Column="3"
+                Grid.ColumnSpan="3"
+                BackgroundColor="#FF1344"
+                HorizontalTextAlignment="Center"
+                Text="{Binding ResFecha3}"
+                TextColor="White" />
+            <Label
+                Grid.Row="8"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                BackgroundColor="#FF1344"
+                HorizontalTextAlignment="Center"
+                Text="{Binding AntFecha4}"
+                TextColor="White" />
+            <Label
+                Grid.Row="8"
+                Grid.Column="3"
+                Grid.ColumnSpan="3"
+                BackgroundColor="#FF1344"
+                HorizontalTextAlignment="Center"
+                Text="{Binding ResFecha4}"
+                TextColor="White" />
+            <ads:AdMobView Grid.Row="9" Grid.ColumnSpan="6" />
         </Grid>
     </ContentPage.Content>
 </ContentPage>

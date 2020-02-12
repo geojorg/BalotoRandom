@@ -5,6 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:ads="clr-namespace:BalotoRandom.Controls"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:i18n="clr-namespace:BalotoRandom.Helpers"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:viewModels="clr-namespace:BalotoRandom.ViewModels"
     Title="Baloto"
@@ -157,7 +158,7 @@
             CornerRadius="7"
             HeightRequest="50"
             HorizontalOptions="Center"
-            Text="Aleatorio"
+            Text="{i18n:Translate Random}"
             TextColor="White"
             WidthRequest="170" />
         <Button
@@ -170,7 +171,7 @@
             CornerRadius="7"
             HeightRequest="50"
             HorizontalOptions="Center"
-            Text="Probable"
+            Text="{i18n:Translate Probable}"
             TextColor="White"
             WidthRequest="170" />
         <ads:AdMobView Grid.Row="4" Grid.ColumnSpan="6" />

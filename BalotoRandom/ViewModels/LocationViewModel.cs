@@ -1,4 +1,5 @@
-﻿using BalotoRandom.Models;
+﻿using BalotoRandom.Helpers;
+using BalotoRandom.Models;
 using BalotoRandom.Services;
 using System;
 using System.Diagnostics;
@@ -95,8 +96,8 @@ namespace BalotoRandom.ViewModels
             SearchResultModel resultModel = await mapsService.GetTextSearch(model);
             if (resultModel.Status != "OK")
             {
-                Direction = "No Disponible";
-                Name = "No Disponible";
+                Direction = Languages.Available;
+                Name = Languages.Available;
                 Lat = CurrentLatitude;
                 Lng = CurrentLongitude;
             }

@@ -1,4 +1,5 @@
-﻿using BalotoRandom.Services;
+﻿using BalotoRandom.Helpers;
+using BalotoRandom.Services;
 using HtmlAgilityPack;
 using System;
 using System.Collections.Generic;
@@ -226,7 +227,7 @@ namespace BalotoRandom.ViewModels
 
             if (duplicados == true || Bal0 > 43 || Bal1 > 43 || Bal2 > 43 || Bal3 > 43 || Bal4 > 43 || Bal5 > 17)
             {
-                Message = "Revisa los numeros ingresados";
+                Message = Languages.Warning;
                 IsVisible = "Red";
             }
             else
@@ -349,7 +350,7 @@ namespace BalotoRandom.ViewModels
 
             if (duplicados == true || Bal0 > 43 || Bal1 > 43 || Bal2 > 43 || Bal3 > 43 || Bal4 > 43 || Bal5 > 17)
             {
-                Message = "Revisa los numeros ingresados";
+                Message = Languages.Warning;
                 IsVisible = "Red";
             }
             else

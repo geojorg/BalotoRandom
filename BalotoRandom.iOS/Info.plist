@@ -38,5 +38,13 @@
 	</array>
 	<key>FirebaseAppDelegateProxyEnabled</key>
 	<false/>
+  <key>CFBundleLocalizations</key>
+  <array>
+    <string>es</string>
+    <string>pt</string>
+    <string>fr</string>
+  </array>
+  <key>CFBundleDevelopmentRegion</key>
+  <string>en</string>
 </dict>
 </plist>

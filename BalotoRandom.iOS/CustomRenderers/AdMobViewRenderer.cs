@@ -1,4 +1,4 @@
-﻿using BalotoRand.CustomRenderers;
+﻿using BalotoRand.CustomRenders;
 using BalotoRandom.Controls;
 using CoreGraphics;
 using Google.MobileAds;

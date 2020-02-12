@@ -1,4 +1,5 @@
-﻿using BalotoRandom.Services;
+﻿using BalotoRandom.Helpers;
+using BalotoRandom.Services;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -59,7 +60,7 @@ namespace BalotoRandom.ViewModels
         public void LoadResults()
         {
             Fecha = APIService.Fecha;
-            Sorteo = $"Baloto Sorteo {APIService.Sorteo}";
+            Sorteo = $"Baloto {Languages.Draw} {APIService.Sorteo}";
             Acumulado = APIService.Acumulado;
             Res1 = APIService.B1;
             Res2 = APIService.B2;

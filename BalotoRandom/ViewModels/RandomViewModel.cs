@@ -1,4 +1,5 @@
-﻿using BalotoRandom.Services;
+﻿using BalotoRandom.Helpers;
+using BalotoRandom.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,7 +35,7 @@ namespace BalotoRandom.ViewModels
             Color = "Transparent";
             if (Connectivity.NetworkAccess != NetworkAccess.Internet)
             {
-                Application.Current.MainPage.DisplayAlert("Error", "Favor verificar la conexion a Internet para acceder a los resultados", "OK");
+                Application.Current.MainPage.DisplayAlert(Languages.Error, Languages.InternetError, Languages.Accept);
             }
             else
             {
@@ -46,7 +47,7 @@ namespace BalotoRandom.ViewModels
         public ICommand GenerateCommand => new Command(Generate);
         private async void Generate()
         {
-            Message = "La suerte seguro que hoy está de tu lado";
+            Message = Languages.Message;
             var analyticsService = DependencyService.Get<IFirebaseAnalytics>();
             analyticsService.LogEvent("aleatorio");
             Color = "Black";
@@ -85,7 +86,7 @@ namespace BalotoRandom.ViewModels
         public ICommand ArtificialCommand => new Command(Artificial);
         private async void Artificial()
         {
-            Message = "Se han calculado las probabilidades y esté es tu numero";
+            Message = Languages.MessageProb;
             DependencyService.Get<IAdInterstitial>().ShowAd();
             var analyticsService = DependencyService.Get<IFirebaseAnalytics>();
             analyticsService.LogEvent("probable");

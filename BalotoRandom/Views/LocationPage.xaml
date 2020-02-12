@@ -5,9 +5,10 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:ads="clr-namespace:BalotoRandom.Controls"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:i18n="clr-namespace:BalotoRandom.Helpers"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:viewModels="clr-namespace:BalotoRandom.ViewModels"
-    Title="Donde Comprar"
+    Title="{i18n:Translate WhereBuy}"
     Shell.BackgroundColor="#1601C8"
     mc:Ignorable="d">
 
@@ -42,7 +43,7 @@
                 HeightRequest="50"
                 HorizontalOptions="Center"
                 IsEnabled="{Binding IsEnable}"
-                Text="Buscar"
+                Text="{i18n:Translate Search}"
                 TextColor="White"
                 WidthRequest="170" />
             <ads:AdMobView Grid.Row="4" />
